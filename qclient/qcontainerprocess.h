@@ -3,6 +3,14 @@
 
 #include <QProcess>
 
+class QContainerEnvironment
+{
+public:
+    QContainerEnvironment();
+    QContainerEnvironment(const QContainerEnvironment &);
+    ~QContainerEnvironment();
+};
+
 class QContainerProcess : public QIODevice
 {
     Q_OBJECT
@@ -29,6 +37,9 @@ public:
 
     QString workingDirectory() const;
     void setWorkingDirectory(const QString &);
+
+    QContainerEnvironment containerEnvironment() const;
+    void setContainerEnvironment(const QContainerEnvironment &);
 
     // IO Setup
     QProcess::ProcessChannelMode readChannelMode() const;
