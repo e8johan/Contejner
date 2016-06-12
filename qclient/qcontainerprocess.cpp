@@ -19,6 +19,9 @@
 
 #include "qcontainerprocess.h"
 
+#include "contejnermanager.h"
+#include "contejnerinstance.h"
+
 QContainerEnvironment::QContainerEnvironment()
 {
 }
